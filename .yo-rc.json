@@ -1,0 +1,37 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.softplan.transport",
+            "nativeLanguage": "pt-br"
+        },
+        "jhipsterVersion": "5.8.1",
+        "applicationType": "monolith",
+        "baseName": "softplan",
+        "packageName": "com.softplan.transport",
+        "packageFolder": "com/softplan/transport",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "no",
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "h2Disk",
+        "prodDatabaseType": "mysql",
+        "searchEngine": false,
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": true,
+        "jwtSecretKey": "NGU4Mzk0NjgzZWZhMDk0MjlmOWFkMjU0N2I0ODA3ZGQ1NTAwNGY1NjVhZTFjNGQ3NzE5NzkwNzQ2NDNhM2ExNGZiMjkwMDYxNDA2Yzc0NjM5ZGI4NTFiZDM5MjcwN2U0Y2YxMDY2NzllN2QwNzYwZjMzNDQ2ZWRlZGRiNTRlMWY=",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": true,
+        "nativeLanguage": "pt-br",
+        "languages": ["pt-br", "en"]
+    }
+}
