@@ -1,0 +1,39 @@
+{
+    "name": "AdjustmentFactor",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "condition",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "conditionOperator",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cost",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "trajectory",
+            "otherEntityName": "trajectory",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "adjustementFactor"
+        }
+    ],
+    "changelogDate": "20190205163404",
+    "entityTableName": "adjustment_factor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

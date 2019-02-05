@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Trajectory.
+    -->
+    <changeSet id="20190205163401-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="vehicle_id"
+                                 baseTableName="trajectory"
+                                 constraintName="fk_trajectory_vehicle_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vehicle"/>
+
+        <addForeignKeyConstraint baseColumnNames="trajectory_id"
+                                 baseTableName="trajectory_road_type"
+                                 constraintName="fk_trajectory_road_type_trajectory_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="trajectory"/>
+        <addForeignKeyConstraint baseColumnNames="road_type_id"
+                                 baseTableName="trajectory_road_type"
+                                 constraintName="fk_trajectory_road_type_road_type_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="road_type"/>
+        
+        <addForeignKeyConstraint baseColumnNames="trajectory_id"
+                                 baseTableName="trajectory_adjustement_factor"
+                                 constraintName="fk_trajectory_adjustement_factor_trajectory_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="trajectory"/>
+        <addForeignKeyConstraint baseColumnNames="adjustement_factor_id"
+                                 baseTableName="trajectory_adjustement_factor"
+                                 constraintName="fk_trajectory_adjustement_factor_adjustement_factor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="adjustment_factor"/>
+        
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+{
+    "softplanApp": {
+        "roadType": {
+            "home": {
+                "title": "Road Types",
+                "createLabel": "Criar novo Road Type",
+                "createOrEditLabel": "Criar ou editar Road Type"
+            },
+            "created": "Um novo Road Type foi criado com o identificador {{ param }}",
+            "updated": "Um Road Type foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Road Type foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Road Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Road Type"
+            },
+            "name": "Name",
+            "cost": "Cost",
+            "unit": "Unit",
+            "trajectory": "Trajectory"
+        }
+    }
+}

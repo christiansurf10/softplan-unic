@@ -1,0 +1,25 @@
+{
+    "softplanApp": {
+        "adjustmentFactor": {
+            "home": {
+                "title": "Adjustment Factors",
+                "createLabel": "Create a new Adjustment Factor",
+                "createOrEditLabel": "Create or edit a Adjustment Factor"
+            },
+            "created": "A new Adjustment Factor is created with identifier {{ param }}",
+            "updated": "A Adjustment Factor is updated with identifier {{ param }}",
+            "deleted": "A Adjustment Factor is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Adjustment Factor {{ id }}?"
+            },
+            "detail": {
+                "title": "Adjustment Factor"
+            },
+            "name": "Name",
+            "condition": "Condition",
+            "conditionOperator": "Condition Operator",
+            "cost": "Cost",
+            "trajectory": "Trajectory"
+        }
+    }
+}

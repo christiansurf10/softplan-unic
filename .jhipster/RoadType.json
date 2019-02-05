@@ -1,0 +1,35 @@
+{
+    "name": "RoadType",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cost",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "unit",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "trajectory",
+            "otherEntityName": "trajectory",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "roadType"
+        }
+    ],
+    "changelogDate": "20190205163403",
+    "entityTableName": "road_type",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

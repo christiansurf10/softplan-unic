@@ -1,0 +1,23 @@
+{
+    "softplanApp": {
+        "trajectoryHistory": {
+            "home": {
+                "title": "Trajectory Histories",
+                "createLabel": "Criar novo Trajectory History",
+                "createOrEditLabel": "Criar ou editar Trajectory History"
+            },
+            "created": "Um novo Trajectory History foi criado com o identificador {{ param }}",
+            "updated": "Um Trajectory History foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Trajectory History foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Trajectory History {{ id }}?"
+            },
+            "detail": {
+                "title": "Trajectory History"
+            },
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "trajectory": "Trajectory"
+        }
+    }
+}

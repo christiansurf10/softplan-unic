@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="trajectory">
+            <h2><span jhiTranslate="softplanApp.trajectory.detail.title">Trajectory</span> {{trajectory.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="softplanApp.trajectory.name">Name</span></dt>
+                <dd>
+                    <span>{{trajectory.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="softplanApp.trajectory.vehicle">Vehicle</span></dt>
+                <dd>
+                    <div *ngIf="trajectory.vehicle">
+                        <a [routerLink]="['/vehicle', trajectory.vehicle?.id, 'view']">{{trajectory.vehicle?.name}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="softplanApp.trajectory.roadType">Road Type</span></dt>
+                <dd>
+                    <span *ngFor="let roadType of trajectory.roadTypes; let last = last">
+                        <a [routerLink]="['/road-type', roadType?.id, 'view' ]">{{roadType.name}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="softplanApp.trajectory.adjustementFactor">Adjustement Factor</span></dt>
+                <dd>
+                    <span *ngFor="let adjustementFactor of trajectory.adjustementFactors; let last = last">
+                        <a [routerLink]="['/adjustment-factor', adjustementFactor?.id, 'view' ]">{{adjustementFactor.name}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/trajectory', trajectory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

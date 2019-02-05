@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="adjustmentFactor">
+            <h2><span jhiTranslate="softplanApp.adjustmentFactor.detail.title">Adjustment Factor</span> {{adjustmentFactor.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="softplanApp.adjustmentFactor.name">Name</span></dt>
+                <dd>
+                    <span>{{adjustmentFactor.name}}</span>
+                </dd>
+                <dt><span jhiTranslate="softplanApp.adjustmentFactor.condition">Condition</span></dt>
+                <dd>
+                    <span>{{adjustmentFactor.condition}}</span>
+                </dd>
+                <dt><span jhiTranslate="softplanApp.adjustmentFactor.conditionOperator">Condition Operator</span></dt>
+                <dd>
+                    <span>{{adjustmentFactor.conditionOperator}}</span>
+                </dd>
+                <dt><span jhiTranslate="softplanApp.adjustmentFactor.cost">Cost</span></dt>
+                <dd>
+                    <span>{{adjustmentFactor.cost}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/adjustment-factor', adjustmentFactor.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

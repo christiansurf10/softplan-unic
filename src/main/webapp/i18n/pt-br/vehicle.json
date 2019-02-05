@@ -1,0 +1,22 @@
+{
+    "softplanApp": {
+        "vehicle": {
+            "home": {
+                "title": "Vehicles",
+                "createLabel": "Criar novo Vehicle",
+                "createOrEditLabel": "Criar ou editar Vehicle"
+            },
+            "created": "Um novo Vehicle foi criado com o identificador {{ param }}",
+            "updated": "Um Vehicle foi atualizado com o identificador {{ param }}",
+            "deleted": "Um Vehicle foi deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Vehicle {{ id }}?"
+            },
+            "detail": {
+                "title": "Vehicle"
+            },
+            "name": "Name",
+            "cost": "Cost"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "softplanApp": {
+        "trajectory": {
+            "home": {
+                "title": "Trajectories",
+                "createLabel": "Create a new Trajectory",
+                "createOrEditLabel": "Create or edit a Trajectory"
+            },
+            "created": "A new Trajectory is created with identifier {{ param }}",
+            "updated": "A Trajectory is updated with identifier {{ param }}",
+            "deleted": "A Trajectory is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Trajectory {{ id }}?"
+            },
+            "detail": {
+                "title": "Trajectory"
+            },
+            "name": "Name",
+            "vehicle": "Vehicle",
+            "roadType": "Road Type",
+            "adjustementFactor": "Adjustement Factor"
+        }
+    }
+}

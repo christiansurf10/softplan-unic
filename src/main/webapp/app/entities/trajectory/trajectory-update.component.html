@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-trajectory-heading" jhiTranslate="softplanApp.trajectory.home.createOrEditLabel">Create or edit a Trajectory</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!trajectory.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="trajectory.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="softplanApp.trajectory.name" for="field_name">Name</label>
+                    <input type="text" class="form-control" name="name" id="field_name"
+                        [(ngModel)]="trajectory.name" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="softplanApp.trajectory.vehicle" for="field_vehicle">Vehicle</label>
+                    <select class="form-control" id="field_vehicle" name="vehicle" [(ngModel)]="trajectory.vehicle" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="vehicleOption.id === trajectory.vehicle?.id ? trajectory.vehicle : vehicleOption" *ngFor="let vehicleOption of vehicles; trackBy: trackVehicleById">{{vehicleOption.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label jhiTranslate="softplanApp.trajectory.roadType" for="field_roadType">Road Type</label>
+                    <select class="form-control" id="field_roadType" multiple name="roadType" [(ngModel)]="trajectory.roadTypes">
+                        <option [ngValue]="getSelected(trajectory.roadTypes, roadTypeOption)" *ngFor="let roadTypeOption of roadtypes; trackBy: trackRoadTypeById">{{roadTypeOption.name}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label jhiTranslate="softplanApp.trajectory.adjustementFactor" for="field_adjustementFactor">Adjustement Factor</label>
+                    <select class="form-control" id="field_adjustementFactor" multiple name="adjustementFactor" [(ngModel)]="trajectory.adjustementFactors">
+                        <option [ngValue]="getSelected(trajectory.adjustementFactors, adjustmentFactorOption)" *ngFor="let adjustmentFactorOption of adjustmentfactors; trackBy: trackAdjustmentFactorById">{{adjustmentFactorOption.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
