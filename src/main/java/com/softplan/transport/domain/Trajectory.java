@@ -26,6 +26,18 @@ public class Trajectory implements Serializable {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "unit_first_road")
+    private Double unitFirstRoad;
+
+    @Column(name = "unit_second_road")
+    private Double unitSecondRoad;
+
+    @Column(name = "load_weight")
+    private Integer loadWeight;
+
+    @Column(name = "total_cost")
+    private Double totalCost;
+
     @ManyToOne
     @JsonIgnoreProperties("trajectories")
     private Vehicle vehicle;
@@ -62,6 +74,58 @@ public class Trajectory implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Double getUnitFirstRoad() {
+        return unitFirstRoad;
+    }
+
+    public Trajectory unitFirstRoad(Double unitFirstRoad) {
+        this.unitFirstRoad = unitFirstRoad;
+        return this;
+    }
+
+    public void setUnitFirstRoad(Double unitFirstRoad) {
+        this.unitFirstRoad = unitFirstRoad;
+    }
+
+    public Double getUnitSecondRoad() {
+        return unitSecondRoad;
+    }
+
+    public Trajectory unitSecondRoad(Double unitSecondRoad) {
+        this.unitSecondRoad = unitSecondRoad;
+        return this;
+    }
+
+    public void setUnitSecondRoad(Double unitSecondRoad) {
+        this.unitSecondRoad = unitSecondRoad;
+    }
+
+    public Integer getLoadWeight() {
+        return loadWeight;
+    }
+
+    public Trajectory loadWeight(Integer loadWeight) {
+        this.loadWeight = loadWeight;
+        return this;
+    }
+
+    public void setLoadWeight(Integer loadWeight) {
+        this.loadWeight = loadWeight;
+    }
+
+    public Double getTotalCost() {
+        return totalCost;
+    }
+
+    public Trajectory totalCost(Double totalCost) {
+        this.totalCost = totalCost;
+        return this;
+    }
+
+    public void setTotalCost(Double totalCost) {
+        this.totalCost = totalCost;
     }
 
     public Vehicle getVehicle() {
@@ -153,6 +217,10 @@ public class Trajectory implements Serializable {
         return "Trajectory{" +
             "id=" + getId() +
             ", name='" + getName() + "'" +
+            ", unitFirstRoad=" + getUnitFirstRoad() +
+            ", unitSecondRoad=" + getUnitSecondRoad() +
+            ", loadWeight=" + getLoadWeight() +
+            ", totalCost=" + getTotalCost() +
             "}";
     }
 }

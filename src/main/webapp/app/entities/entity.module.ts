@@ -51,6 +51,14 @@ import { RouterModule } from '@angular/router';
             {
                 path: 'adjustment-factor',
                 loadChildren: './adjustment-factor/adjustment-factor.module#SoftplanAdjustmentFactorModule'
+            },
+            {
+                path: 'trajectory',
+                loadChildren: './trajectory/trajectory.module#SoftplanTrajectoryModule'
+            },
+            {
+                path: 'trajectory',
+                loadChildren: './trajectory/trajectory.module#SoftplanTrajectoryModule'
             }
             /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
         ])

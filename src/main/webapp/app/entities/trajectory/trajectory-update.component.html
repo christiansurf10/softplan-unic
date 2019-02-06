@@ -14,6 +14,26 @@
                     <input type="text" class="form-control" name="name" id="field_name"
                         [(ngModel)]="trajectory.name" />
                 </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="softplanApp.trajectory.unitFirstRoad" for="field_unitFirstRoad">Unit First Road</label>
+                    <input type="number" class="form-control" name="unitFirstRoad" id="field_unitFirstRoad"
+                        [(ngModel)]="trajectory.unitFirstRoad" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="softplanApp.trajectory.unitSecondRoad" for="field_unitSecondRoad">Unit Second Road</label>
+                    <input type="number" class="form-control" name="unitSecondRoad" id="field_unitSecondRoad"
+                        [(ngModel)]="trajectory.unitSecondRoad" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="softplanApp.trajectory.loadWeight" for="field_loadWeight">Load Weight</label>
+                    <input type="number" class="form-control" name="loadWeight" id="field_loadWeight"
+                        [(ngModel)]="trajectory.loadWeight" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="softplanApp.trajectory.totalCost" for="field_totalCost">Total Cost</label>
+                    <input type="number" class="form-control" name="totalCost" id="field_totalCost"
+                        [(ngModel)]="trajectory.totalCost" />
+                </div>
 
                 <div class="form-group">
                     <label class="form-control-label" jhiTranslate="softplanApp.trajectory.vehicle" for="field_vehicle">Vehicle</label>

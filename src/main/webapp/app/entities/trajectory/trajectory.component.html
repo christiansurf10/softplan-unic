@@ -16,6 +16,10 @@
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
             <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="name"><span jhiTranslate="softplanApp.trajectory.name">Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="unitFirstRoad"><span jhiTranslate="softplanApp.trajectory.unitFirstRoad">Unit First Road</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="unitSecondRoad"><span jhiTranslate="softplanApp.trajectory.unitSecondRoad">Unit Second Road</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="loadWeight"><span jhiTranslate="softplanApp.trajectory.loadWeight">Load Weight</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="totalCost"><span jhiTranslate="softplanApp.trajectory.totalCost">Total Cost</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="vehicle.name"><span jhiTranslate="softplanApp.trajectory.vehicle">Vehicle</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th></th>
             </tr>
@@ -24,6 +28,10 @@
             <tr *ngFor="let trajectory of trajectories ;trackBy: trackId">
                 <td><a [routerLink]="['/trajectory', trajectory.id, 'view' ]">{{trajectory.id}}</a></td>
                 <td>{{trajectory.name}}</td>
+                <td>{{trajectory.unitFirstRoad}}</td>
+                <td>{{trajectory.unitSecondRoad}}</td>
+                <td>{{trajectory.loadWeight}}</td>
+                <td>{{trajectory.totalCost}}</td>
                 <td>
                     <div *ngIf="trajectory.vehicle">
                         <a [routerLink]="['../vehicle', trajectory.vehicle?.id, 'view' ]" >{{trajectory.vehicle?.name}}</a>

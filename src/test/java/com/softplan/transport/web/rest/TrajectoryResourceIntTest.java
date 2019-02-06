@@ -48,6 +48,18 @@ public class TrajectoryResourceIntTest {
     private static final String DEFAULT_NAME = "AAAAAAAAAA";
     private static final String UPDATED_NAME = "BBBBBBBBBB";
 
+    private static final Double DEFAULT_UNIT_FIRST_ROAD = 1D;
+    private static final Double UPDATED_UNIT_FIRST_ROAD = 2D;
+
+    private static final Double DEFAULT_UNIT_SECOND_ROAD = 1D;
+    private static final Double UPDATED_UNIT_SECOND_ROAD = 2D;
+
+    private static final Integer DEFAULT_LOAD_WEIGHT = 1;
+    private static final Integer UPDATED_LOAD_WEIGHT = 2;
+
+    private static final Double DEFAULT_TOTAL_COST = 1D;
+    private static final Double UPDATED_TOTAL_COST = 2D;
+
     @Autowired
     private TrajectoryRepository trajectoryRepository;
 
@@ -93,7 +105,11 @@ public class TrajectoryResourceIntTest {
      */
     public static Trajectory createEntity(EntityManager em) {
         Trajectory trajectory = new Trajectory()
-            .name(DEFAULT_NAME);
+            .name(DEFAULT_NAME)
+            .unitFirstRoad(DEFAULT_UNIT_FIRST_ROAD)
+            .unitSecondRoad(DEFAULT_UNIT_SECOND_ROAD)
+            .loadWeight(DEFAULT_LOAD_WEIGHT)
+            .totalCost(DEFAULT_TOTAL_COST);
         return trajectory;
     }
 
@@ -118,6 +134,10 @@ public class TrajectoryResourceIntTest {
         assertThat(trajectoryList).hasSize(databaseSizeBeforeCreate + 1);
         Trajectory testTrajectory = trajectoryList.get(trajectoryList.size() - 1);
         assertThat(testTrajectory.getName()).isEqualTo(DEFAULT_NAME);
+        assertThat(testTrajectory.getUnitFirstRoad()).isEqualTo(DEFAULT_UNIT_FIRST_ROAD);
+        assertThat(testTrajectory.getUnitSecondRoad()).isEqualTo(DEFAULT_UNIT_SECOND_ROAD);
+        assertThat(testTrajectory.getLoadWeight()).isEqualTo(DEFAULT_LOAD_WEIGHT);
+        assertThat(testTrajectory.getTotalCost()).isEqualTo(DEFAULT_TOTAL_COST);
     }
 
     @Test
@@ -150,7 +170,11 @@ public class TrajectoryResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(trajectory.getId().intValue())))
-            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())));
+            .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME.toString())))
+            .andExpect(jsonPath("$.[*].unitFirstRoad").value(hasItem(DEFAULT_UNIT_FIRST_ROAD.doubleValue())))
+            .andExpect(jsonPath("$.[*].unitSecondRoad").value(hasItem(DEFAULT_UNIT_SECOND_ROAD.doubleValue())))
+            .andExpect(jsonPath("$.[*].loadWeight").value(hasItem(DEFAULT_LOAD_WEIGHT)))
+            .andExpect(jsonPath("$.[*].totalCost").value(hasItem(DEFAULT_TOTAL_COST.doubleValue())));
     }
     
     @SuppressWarnings({"unchecked"})
@@ -197,7 +221,11 @@ public class TrajectoryResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(trajectory.getId().intValue()))
-            .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()));
+            .andExpect(jsonPath("$.name").value(DEFAULT_NAME.toString()))
+            .andExpect(jsonPath("$.unitFirstRoad").value(DEFAULT_UNIT_FIRST_ROAD.doubleValue()))
+            .andExpect(jsonPath("$.unitSecondRoad").value(DEFAULT_UNIT_SECOND_ROAD.doubleValue()))
+            .andExpect(jsonPath("$.loadWeight").value(DEFAULT_LOAD_WEIGHT))
+            .andExpect(jsonPath("$.totalCost").value(DEFAULT_TOTAL_COST.doubleValue()));
     }
 
     @Test
@@ -221,7 +249,11 @@ public class TrajectoryResourceIntTest {
         // Disconnect from session so that the updates on updatedTrajectory are not directly saved in db
         em.detach(updatedTrajectory);
         updatedTrajectory
-            .name(UPDATED_NAME);
+            .name(UPDATED_NAME)
+            .unitFirstRoad(UPDATED_UNIT_FIRST_ROAD)
+            .unitSecondRoad(UPDATED_UNIT_SECOND_ROAD)
+            .loadWeight(UPDATED_LOAD_WEIGHT)
+            .totalCost(UPDATED_TOTAL_COST);
 
         restTrajectoryMockMvc.perform(put("/api/trajectories")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -233,6 +265,10 @@ public class TrajectoryResourceIntTest {
         assertThat(trajectoryList).hasSize(databaseSizeBeforeUpdate);
         Trajectory testTrajectory = trajectoryList.get(trajectoryList.size() - 1);
         assertThat(testTrajectory.getName()).isEqualTo(UPDATED_NAME);
+        assertThat(testTrajectory.getUnitFirstRoad()).isEqualTo(UPDATED_UNIT_FIRST_ROAD);
+        assertThat(testTrajectory.getUnitSecondRoad()).isEqualTo(UPDATED_UNIT_SECOND_ROAD);
+        assertThat(testTrajectory.getLoadWeight()).isEqualTo(UPDATED_LOAD_WEIGHT);
+        assertThat(testTrajectory.getTotalCost()).isEqualTo(UPDATED_TOTAL_COST);
     }
 
     @Test

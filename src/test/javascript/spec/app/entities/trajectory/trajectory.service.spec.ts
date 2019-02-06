@@ -21,7 +21,7 @@ describe('Service Tests', () => {
             service = injector.get(TrajectoryService);
             httpMock = injector.get(HttpTestingController);
 
-            elemDefault = new Trajectory(0, 'AAAAAAA');
+            elemDefault = new Trajectory(0, 'AAAAAAA', 0, 0, 0, 0);
         });
 
         describe('Service methods', async () => {
@@ -55,7 +55,11 @@ describe('Service Tests', () => {
             it('should update a Trajectory', async () => {
                 const returnedFromService = Object.assign(
                     {
-                        name: 'BBBBBB'
+                        name: 'BBBBBB',
+                        unitFirstRoad: 1,
+                        unitSecondRoad: 1,
+                        loadWeight: 1,
+                        totalCost: 1
                     },
                     elemDefault
                 );
@@ -72,7 +76,11 @@ describe('Service Tests', () => {
             it('should return a list of Trajectory', async () => {
                 const returnedFromService = Object.assign(
                     {
-                        name: 'BBBBBB'
+                        name: 'BBBBBB',
+                        unitFirstRoad: 1,
+                        unitSecondRoad: 1,
+                        loadWeight: 1,
+                        totalCost: 1
                     },
                     elemDefault
                 );

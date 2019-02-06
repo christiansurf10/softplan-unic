@@ -26,6 +26,22 @@
                 <constraints nullable="true" />
             </column>
 
+            <column name="unit_first_road" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="unit_second_road" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="load_weight" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="total_cost" type="double">
+                <constraints nullable="true" />
+            </column>
+
             <column name="vehicle_id" type="bigint">
                 <constraints nullable="true" />
             </column>

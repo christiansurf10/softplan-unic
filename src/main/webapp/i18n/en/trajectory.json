@@ -16,6 +16,10 @@
                 "title": "Trajectory"
             },
             "name": "Name",
+            "unitFirstRoad": "Unit First Road",
+            "unitSecondRoad": "Unit Second Road",
+            "loadWeight": "Load Weight",
+            "totalCost": "Total Cost",
             "vehicle": "Vehicle",
             "roadType": "Road Type",
             "adjustementFactor": "Adjustement Factor"

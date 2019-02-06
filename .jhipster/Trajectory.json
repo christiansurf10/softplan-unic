@@ -4,6 +4,22 @@
         {
             "fieldName": "name",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "unitFirstRoad",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "unitSecondRoad",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "loadWeight",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "totalCost",
+            "fieldType": "Double"
         }
     ],
     "relationships": [
