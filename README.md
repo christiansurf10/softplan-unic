@@ -30,7 +30,7 @@ Pronto!
 
 Dois perfis estão disponíveis na aplicação, são eles:
 
-Acesso ao todo conteúdo inclusive a gestão da aplicação
+Acesso as funcionalidades inclusive ao gerenciamento da apliação e documentação:
 User: admin
 Password: admin
 
