@@ -1,20 +1,21 @@
 # Para executar a aplicação softplan-unic
 
-## Banco de Dados Mysql
+## Configurando Banco de Dados Mysql
 
 Crie um banco local chamado 'softplan' com username 'root' e password 'root'
 
-####Parâmetros de conexão:
+### Parâmetros de conexão:
+
 url: jdbc:mysql://localhost:3306/softplan?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
 username: root
 password: root
 
-#### Versão do JAVA
+### Versão do JAVA
 
 Verifique a versão do java, deve ser superior ao java version "1.8.0_131"
 Certifique-se que a porta 8080 não está em uso por outra aplicação!
 
-#### Rodando a Aplicação Softplan-Unic
+### Rodando a Aplicação Softplan-Unic
 
 Navegue até o local do arquivo 'softplan-0.0.1-SNAPSHOT.war' e execute o comando:
 
