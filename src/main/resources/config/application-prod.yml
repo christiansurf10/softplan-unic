@@ -30,6 +30,8 @@ spring:
         url: jdbc:mysql://localhost:3306/softplan?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
         username: root
         password: root
+        initialization-mode: ALWAYS
+        data: classpath:import.sql
         hikari:
             poolName: Hikari
             auto-commit: false
@@ -48,6 +50,7 @@ spring:
             hibernate.cache.use_second_level_cache: false
             hibernate.cache.use_query_cache: false
             hibernate.generate_statistics: true
+             hibernate.ddl-auto: update
     liquibase:
         contexts: prod
     mail:

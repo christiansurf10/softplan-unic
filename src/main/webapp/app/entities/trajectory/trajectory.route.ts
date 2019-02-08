@@ -33,7 +33,7 @@ export const trajectoryRoute: Routes = [
         path: '',
         component: TrajectoryComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'softplanApp.trajectory.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -45,7 +45,7 @@ export const trajectoryRoute: Routes = [
             trajectory: TrajectoryResolve
         },
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'softplanApp.trajectory.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -57,7 +57,7 @@ export const trajectoryRoute: Routes = [
             trajectory: TrajectoryResolve
         },
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'softplanApp.trajectory.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -69,7 +69,7 @@ export const trajectoryRoute: Routes = [
             trajectory: TrajectoryResolve
         },
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'softplanApp.trajectory.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -84,7 +84,7 @@ export const trajectoryPopupRoute: Routes = [
             trajectory: TrajectoryResolve
         },
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: [],
             pageTitle: 'softplanApp.trajectory.home.title'
         },
         canActivate: [UserRouteAccessService],

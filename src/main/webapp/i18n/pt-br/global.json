@@ -89,7 +89,7 @@
             "id": "Código"
         },
         "ribbon": {
-            "dev": "Development"
+            "dev": "Avaliação Softplan"
         },
         "item-count": "Mostrando {{first}} - {{second}} de {{total}} resultados."
     },
@@ -102,7 +102,7 @@
             "delete": "Excluir",
             "edit": "Editar",
             "open": "Open",
-            "save": "Salvar",
+            "save": "Calcular e Salvar",
             "view": "Visualizar"
         },
         "detail": {

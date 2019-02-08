@@ -1,3 +1,45 @@
+# Para executar a aplicação softplan-unic
+
+## Banco de Dados Mysql
+
+Crie um banco local chamado 'softplan' com username 'root' e password 'root'
+
+####Parâmetros de conexão:
+url: jdbc:mysql://localhost:3306/softplan?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
+username: root
+password: root
+
+#### Versão do JAVA
+
+Verifique a versão do java, deve ser superior ao java version "1.8.0_131"
+Certifique-se que a porta 8080 não está em uso por outra aplicação!
+
+#### Rodando a Aplicação Softplan-Unic
+
+Navegue até o local do arquivo 'softplan-0.0.1-SNAPSHOT.war' e execute o comando:
+
+java -jar softplan-0.0.1-SNAPSHOT.war
+
+Então abra o browser com o endereço:
+
+http://localhost:8080.
+
+Pronto!
+
+##Logar e acessar a área Administrativa.
+
+Dois perfis estão disponíveis na aplicação, são eles:
+
+Acesso ao todo conteúdo inclusive a gestão da aplicação
+User: admin
+Password: admin
+
+Acesso apenas as funcionalidades da aplicação
+User: user
+Password: user
+
+Pronto!
+
 # softplan
 
 This application was generated using JHipster 5.8.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.8.1](https://www.jhipster.tech/documentation-archive/v5.8.1).

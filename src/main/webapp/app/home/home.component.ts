@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
     }
 
     registerAuthenticationSuccess() {
-        this.eventManager.subscribe('authenticationSuccess', message => {
+        this.eventManager.subscribe('authenticationSuccess', () => {
             this.accountService.identity().then(account => {
                 this.account = account;
             });

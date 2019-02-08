@@ -2,8 +2,8 @@
     "softplanApp": {
         "trajectory": {
             "home": {
-                "title": "Trajectories",
-                "createLabel": "Criar novo Trajectory",
+                "title": "Calcular o custo da trajetória da sua carga!",
+                "createLabel": "Novo Calculo",
                 "createOrEditLabel": "Criar ou editar Trajectory"
             },
             "created": "Um novo Trajectory foi criado com o identificador {{ param }}",
@@ -15,14 +15,14 @@
             "detail": {
                 "title": "Trajectory"
             },
-            "name": "Name",
-            "unitFirstRoad": "Unit First Road",
-            "unitSecondRoad": "Unit Second Road",
-            "loadWeight": "Load Weight",
-            "totalCost": "Total Cost",
-            "vehicle": "Vehicle",
-            "roadType": "Road Type",
-            "adjustementFactor": "Adjustement Factor"
+            "name": "Nome do Trajeto",
+            "unitFirstRoad": "Km - Via pavimentada",
+            "unitSecondRoad": "km - Via Não-pavimentada",
+            "loadWeight": "Peso em Toneladas",
+            "totalCost": "Valor Total",
+            "vehicle": "Tipo de Veículo",
+            "roadType": "Tipo da Estrada",
+            "adjustementFactor": "Fator de Ajuste"
         }
     }
 }

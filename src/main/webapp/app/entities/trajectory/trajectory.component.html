@@ -1,10 +1,10 @@
 <div>
     <h2 id="page-heading">
-        <span jhiTranslate="softplanApp.trajectory.home.title">Trajectories</span>
+        <span jhiTranslate="softplanApp.trajectory.home.title">Aqui você pode calcular o custo de transporte da sua carga!</span>
         <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-trajectory" [routerLink]="['/trajectory/new']">
             <fa-icon [icon]="'plus'"></fa-icon>
             <span  jhiTranslate="softplanApp.trajectory.home.createLabel">
-            Create new Trajectory
+            Custo de Transporte
             </span>
         </button>
     </h2>
@@ -14,7 +14,7 @@
         <table class="table table-striped">
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
-            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <!--<th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>-->
             <th jhiSortBy="name"><span jhiTranslate="softplanApp.trajectory.name">Name</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="unitFirstRoad"><span jhiTranslate="softplanApp.trajectory.unitFirstRoad">Unit First Road</span> <fa-icon [icon]="'sort'"></fa-icon></th>
             <th jhiSortBy="unitSecondRoad"><span jhiTranslate="softplanApp.trajectory.unitSecondRoad">Unit Second Road</span> <fa-icon [icon]="'sort'"></fa-icon></th>
@@ -26,12 +26,12 @@
             </thead>
             <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
             <tr *ngFor="let trajectory of trajectories ;trackBy: trackId">
-                <td><a [routerLink]="['/trajectory', trajectory.id, 'view' ]">{{trajectory.id}}</a></td>
-                <td>{{trajectory.name}}</td>
+                <!--<td><a [routerLink]="['/trajectory', trajectory.id, 'view' ]">{{trajectory.id}}</a></td>-->
+                <td><a [routerLink]="['/trajectory', trajectory.id, 'view' ]">{{trajectory.name}}</a></td>
                 <td>{{trajectory.unitFirstRoad}}</td>
                 <td>{{trajectory.unitSecondRoad}}</td>
                 <td>{{trajectory.loadWeight}}</td>
-                <td>{{trajectory.totalCost}}</td>
+                <td style="font-weight:bold">{{trajectory.totalCost | currency:'BRL':true}}</td>
                 <td>
                     <div *ngIf="trajectory.vehicle">
                         <a [routerLink]="['../vehicle', trajectory.vehicle?.id, 'view' ]" >{{trajectory.vehicle?.name}}</a>

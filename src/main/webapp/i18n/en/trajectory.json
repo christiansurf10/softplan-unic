@@ -3,7 +3,7 @@
         "trajectory": {
             "home": {
                 "title": "Trajectories",
-                "createLabel": "Create a new Trajectory",
+                "createLabel": "Calculate Cost Trajecotory",
                 "createOrEditLabel": "Create or edit a Trajectory"
             },
             "created": "A new Trajectory is created with identifier {{ param }}",
