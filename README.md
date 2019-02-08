@@ -27,7 +27,7 @@ http://localhost:8080.
 
 Pronto!
 
-##Logar e acessar a área Administrativa.
+## Logar e acessar a área Administrativa.
 
 Dois perfis estão disponíveis na aplicação, são eles:
 
