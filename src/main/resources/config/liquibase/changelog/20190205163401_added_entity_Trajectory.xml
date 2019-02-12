@@ -70,7 +70,8 @@
         </createTable>
 
         <addPrimaryKey columnNames="trajectory_id, adjustement_factor_id" tableName="trajectory_adjustement_factor"/>
-        
+
+
     </changeSet>
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
 </databaseChangeLog>

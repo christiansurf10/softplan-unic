@@ -47,6 +47,7 @@ public class TrajectoryServiceIntTest {
 
         Set<RoadType> roadTypes = new HashSet<RoadType>();
         roadTypePavimentada = new RoadType();
+        roadTypePavimentada.setId(1L);
         roadTypePavimentada.setName("Pavimentada");
         roadTypePavimentada.setCost(0.54);
         roadTypePavimentada.setUnit("km");
@@ -54,6 +55,7 @@ public class TrajectoryServiceIntTest {
 
         roadTypeNPavimentada = new RoadType();
         roadTypeNPavimentada = new RoadType();
+        roadTypeNPavimentada.setId(2L);
         roadTypeNPavimentada.setName("Não-pavimentada");
         roadTypeNPavimentada.setCost(0.62);
         roadTypeNPavimentada.setUnit("km");
@@ -80,8 +82,8 @@ public class TrajectoryServiceIntTest {
     @Test
     @Transactional
     public void createTrajectory(){
-
-        //assertThat(trajectoryService.calculateTotalCostTrajectory(trajectory)).isEqualTo(37.20);
+        System.out.println("Calculo da trajetória: " + trajectoryService.calculateTotalCostTrajectory(trajectory));
+        assertThat(trajectoryService.calculateTotalCostTrajectory(trajectory)).isEqualTo(37.20);
 
         }
 

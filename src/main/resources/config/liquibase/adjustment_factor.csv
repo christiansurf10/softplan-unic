@@ -1,0 +1,2 @@
+id;name;jhi_condition;condition_operator;jhi_cost
+1;"Fator de ajuste para excedente à cinco toneladas";"Acrescentar ao custo para cada tonelada excedente.";"5";0.02

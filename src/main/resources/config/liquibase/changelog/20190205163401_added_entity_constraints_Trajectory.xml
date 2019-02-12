@@ -35,6 +35,6 @@
                                  constraintName="fk_trajectory_adjustement_factor_adjustement_factor_id"
                                  referencedColumnNames="id"
                                  referencedTableName="adjustment_factor"/>
-        
+
     </changeSet>
 </databaseChangeLog>
